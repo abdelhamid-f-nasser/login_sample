@@ -59,6 +59,7 @@ class _LoginFormState extends State<LoginForm> {
               helperText:
                   'Password must be at least 8 characters long, contain at least 1 number and 1 special character',
               helperMaxLines: 2,
+              obscureText: true,
               controller: _passwordController,
               validator: (value) => widget.validatePassword(value),
             ),

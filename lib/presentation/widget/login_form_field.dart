@@ -8,6 +8,7 @@ class LoginFormField extends StatelessWidget {
   final String? hintText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
+  final bool obscureText;
 
   const LoginFormField({
     super.key,
@@ -17,6 +18,7 @@ class LoginFormField extends StatelessWidget {
     this.helperMaxLines,
     this.validator,
     this.hintText,
+    this.obscureText = false,
   });
 
   @override
@@ -50,6 +52,7 @@ class LoginFormField extends StatelessWidget {
         ),
       ),
       controller: controller,
+      obscureText: obscureText,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: validator,
     );
